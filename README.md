@@ -4,7 +4,7 @@
   <p align="center">
     <a href="https://pypi.org/project/logwatch-cli/"><img src="https://img.shields.io/pypi/v/logwatch-cli?color=blue&label=PyPI" alt="PyPI"></a>
     <a href="https://pypi.org/project/logwatch-cli/"><img src="https://img.shields.io/pypi/pyversions/logwatch-cli" alt="Python"></a>
-    <a href="https://github.com/shazeus/logwatch/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+    <a href="https://github.com/shazeus/logwatch/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
     <a href="https://github.com/shazeus/logwatch/stargazers"><img src="https://img.shields.io/github/stars/shazeus/logwatch?style=social" alt="Stars"></a>
   </p>
 </p>
@@ -81,7 +81,8 @@ logwatch diff /var/log/app.log.1 /var/log/app.log
 | `-l / --level` | Minimum log level (TRACE, DEBUG, INFO, WARNING, ERROR, CRITICAL) |
 | `-p / --pattern` | Regex filter pattern |
 | `--invert` | Invert pattern match (exclude matching lines) |
-| `-n / --lines` | Number of lines to tail/limit |
+| `-n / --lines` | Number of lines for `tail` and `filter` |
+| `-n / --limit` | Maximum entries for `errors` |
 | `--fmt` | Override format detection (auto, syslog, python, apache_combined, nginx, iso8601) |
 | `--no-follow` | Print tail only, don't follow |
 
