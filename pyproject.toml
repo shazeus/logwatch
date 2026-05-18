@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logwatch-cli"
+version = "0.1.0"
+description = "Real-time log file analyzer and monitor — filter, search, stats, tail, and watch logs from the terminal."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "shazeus", email = "efeborazan07@gmail.com" }]
+requires-python = ">=3.10"
+keywords = ["log", "monitor", "tail", "analyzer", "cli", "terminal", "syslog", "nginx", "apache"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Logging",
+    "Topic :: System :: Monitoring",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+    "watchdog>=3.0",
+]
+
+[project.scripts]
+logwatch = "logwatch.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/shazeus/logwatch"
+Repository = "https://github.com/shazeus/logwatch"
+Issues = "https://github.com/shazeus/logwatch/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["logwatch*"]
